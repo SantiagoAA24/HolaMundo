@@ -4,13 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [ // Componenetes que van a ser utilizables y visibles en este modulo (tambien pueden ser importados de un modulo que contiene a otros componentes)
+  declarations: [ // Componentes a utilizar en este Modulo (i.e. en el proyecto)
     AppComponent
   ],
-  imports: [
+  imports: [ // Otros Modulos a utilizar en el proyecto
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent] // Este es el componenete que inicia el modulo
+  bootstrap: [AppComponent] // * Este es el componenete que inicia el Modulo (app.component.ts)
 })
 export class AppModule { }
