@@ -1,0 +1,18 @@
+<h1>Hola {{ nombre }}</h1>
+
+<h3 [ngClass]="nombre == 'Anónimo' ? 'anonimo' : 'saludo'" id="usuario" [innerText]="nombre">
+  {{ nombre }}
+</h3>
+<!-- Usando el atributo innerText se puede insertar el texto a partir de lo que le pase la variable nombre -->
+<!-- Usando [ngClass] se pueden poner clases con valores del controlador -->
+
+<h5 [ngStyle]="{'color': 'orange'}">
+  Hola a todos
+</h5>
+
+<p [ngStyle]="myStyle">
+  Buenos días a todos
+</p>
+<!-- Usando [ngStyle] se pueden poner estilos definidos en el controlador -->
+
+<button id="alerta" (click)="enviarMensajeAlPadre()">Mostrar alerta</button>

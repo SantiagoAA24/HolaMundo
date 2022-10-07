@@ -314,5 +314,19 @@
 </div>
 
 <div class="content" role="main">
-  <h1>Hola {{ nombre }}</h1>
+  <!-- <h1>Hola {{ nombre }}</h1> -->
+
+  <input type="text" placeholder="Usuario" [(ngModel)]="usuario">
+
+  <!-- Crea una instancia del componente Saludo -->
+  <app-saludo [nombre]="usuario" (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo>
+  <!-- Modifica el valor de la variable nombre del componente Saludo asignandole el valor de la variable saludo definida en el AppComponente -->
+  <!-- <app-saludo nombre="Santiago"></app-saludo> -->
+  <!-- Le pasa un nuevo valor de la variable nombre al componente Saludo sin modificar la variable usuario del AppComponent -->
+  <app-saludo></app-saludo>
+  <!-- Toma el valor por defecto de la variable nombre definido en el componente Saludo -->
+
+  <!-- Los valores que están entre [] hacen referencia a atributos o propiedades -->
+  <!-- Los valores que están entre () hacen referencia a eventos -->
+  <!-- Para cambiar el valor de usuario se puede usar ngModel (double binding) -->
 </div>
